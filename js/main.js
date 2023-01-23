@@ -18,14 +18,14 @@ function calculate() {
     .then(res => res.json())
     .then((data) => {
         const rate = data.rates[currency_two_el.value];
-        rate_el.innerText = `1 ${currency_one_el.value} = ${rate} ${currency_two_el}`
+        rate_el.innerText = `1 ${currency_one_el.value} = ${rate} ${currency_two_el.value}`
         amount_two_el.value = (amount_one_el.value * rate).toFixed(2);
     });
 }
 
 swap_btn.addEventListener("click", () => {
     const temp = currency_one_el.value;
-    currency_one_el.value = currency_two_el.value
+    currency_one_el.value = currency_two_el.value;
     currency_two_el.value = temp;
     calculate();
 });
