@@ -1,21 +1,33 @@
-const formulario = document.getElementById("form");
+const currency_one_el = document.getElementById("currency-one");
+const currency_two_el = document.getElementById("currency-two");
+const amount_one_el = document.getElementById("amount-one");
+const amount_two_el = document.getElementById("amount-two");
 
-const nombre = document.getElementById("firstName");
-const apellido = document.getElementById("lastName");
-const email = document.getElementById("email");
-const monto = document.getElementById("amount");
-const de = document.getElementById("feesde");
-const a = document.getElementById("feesa");
+const swap_btn = document.getElementById("swap");
+const rate_el = document.getElementById("rate");
 
-const montoFinal = document.getElementById("finalAmount");
-const preciode = document.getElementById("finalFeesde");
-const precioa = document.getElementById("finalFeesa");
-const totalADevolver = document.getElementById("totalAmount");
+//Listeners
+currency_one_el.addEventListener("change", calculate);
+currency_two_el.addEventListener("change", calculate);
+amount_one_el.addEventListener("input", calculate);
+amount_two_el.addEventListener("input", calculate);
 
-const peso = 1
-const dolar = 186.82;
-const euro = 190.78;
-const real = 34.12;
-const yen = 106.30;
+// Funcion
+function calculate() {
+    fetch(`https://api.exchangerate-api.com/v4/latest/${currency_one_el.value}`)
+    .then(res => res.json())
+    .then((data) => {
+        const rate = data.rates[currency_two_el.value];
+        rate_el.innerText = `1 ${currency_one_el.value} = ${rate} ${currency_two_el}`
+        amount_two_el.value = (amount_one_el.value * rate).toFixed(2);
+    });
+}
 
+swap_btn.addEventListener("click", () => {
+    const temp = currency_one_el.value;
+    currency_one_el.value = currency_two_el.value
+    currency_two_el.value = temp;
+    calculate();
+});
 
+calculate()

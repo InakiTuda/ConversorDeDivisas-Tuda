@@ -1,3 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, 
+*::after, 
+*::before {
+  box-sizing: inherit;
+  outline: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
 .container {
   max-width: 960px;
 }
@@ -53,3 +69,91 @@
   -webkit-overflow-scrolling: touch;
 }
 
+#conversorDiv {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+  )
+  ,url(/media/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 0;
+  margin: 10px;
+}
+
+.containerDiv {
+  display: flex;
+  width: 50%;
+  height: 50%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.btnDiv {
+  color: yellow;
+  cursor: pointer;
+  background-color: #1c1b1b;
+  padding: 1em;
+  border-radius: 5px;
+  margin-top: 2em;
+  border: none;
+}
+
+.currencyDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#currency-one,
+#currency-two {
+  padding: .5em;
+}
+
+#currency-one,
+#currency-two,
+#amount_one,
+#amount_two {
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 0.5em;
+}
+
+.currencyDiv select {
+  border: 1px solid #dedede;
+  font-size: 16px;
+}
+
+.currencyDiv input {
+  color: #1c1b1b;
+  padding: 0.5em;
+  border: 1;
+  font-size: 15.5px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.swap-rate-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rate {
+  color: #000;
+  font-size: 14px;
+  padding: 0 10px;
+  margin-top: 1em;
+}

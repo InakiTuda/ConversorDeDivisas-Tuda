@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversor de Divisas - Iñaki Tuda</title>
     <link rel="stylesheet" href="index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/291844f821.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
@@ -22,8 +23,9 @@
         <div>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-              <a class="nav-link" href="#conversor">Conversor</a>
+              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              <a class="nav-link" href="#registro">Registro</a>
+              <a class="nav-link" href="#conversorDiv">Conversor</a>
               <a class="nav-link" href="compra.html">Compra</a>
               <a class="nav-link" href="#">Contacto</a>
             </div>
@@ -33,47 +35,13 @@
 
     <div class="container">
         <main>
-            <div id="conversor" class="py-5 text-center">
+            <div id="registro" class="py-5 text-center">
                 <img class="d-block mx-auto mb-4" src="/media/logo.png" alt="" width="150" height="100">
                 <h2>Conversor de Divisas</h2>
                 <p class="lead">Conversor de moneda, cambio de divisas y convertidor para dólares, euros, pesos y todas las otras monedas.</p>
             </div>
-            <div class="row g-5">
-                <div class="col-md-5 col-lg-4 order-md-last">
-                  <h4 class="d-flex justify-content-between align-items-center mb-3">
-                    <span class="text-primary">Tu conversión</span>
-                    <!-- <span class="badge bg-primary rounded-pill">3</span> -->
-                  </h4>
-                  <ul class="list-group mb-3">
-                    <li class="list-group-item d-flex justify-content-between lh-sm">
-                      <div>
-                        <h6 class="my-0">Monto</h6>
-                        <small class="text-muted">Monto a convertir</small>
-                      </div>
-                      <span class="text-muted" id="finalAmount">$0</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between lh-sm">
-                      <div>
-                        <h6 class="my-0">Valor</h6>
-                        <small class="text-muted">Valor de:</small>
-                      </div>
-                      <span class="text-muted" id="finalFeesde">0</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between lh-sm">
-                        <div>
-                          <h6 class="my-0">Valor</h6>
-                          <small class="text-muted">Valor a:</small>
-                        </div>
-                        <span class="text-muted" id="finalFeesa">0</span>
-                      </li>
-                    <li class="list-group-item d-flex justify-content-between">
-                      <span>Total convertido:</span>
-                      <strong id="totalAmount">$0</strong>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-md-7 col-lg-8">
-                  <h4 class="mb-3">Ingrese tus datos para convertir</h4>
+                <div class="">
+                  <h4 class="mb-3">Para convertir, por favor ingresa tus datos.</h4>
                   <form class="needs-validation" id="form" novalidate>
                     <div class="row g-3">
                       <div class="col-sm-6">
@@ -99,43 +67,7 @@
                           Por favor, ingresa tu email.
                         </div>
                       </div>
-      
-                      <div class="col-12">
-                        <label for="amount" class="form-label">¿Cuánto queres convertir?</label>
-                        <input type="number" class="form-control" id="valor" placeholder="100000" required>
-                        <div class="invalid-feedback">
-                          Por favor, ingresa cuanto queres convertir.
-                        </div>
-                      </div>
-      
-                      <div class="col-12">
-                        <label for="feesde" class="form-label">De: </label>
-                        <select id="divisa">
-                            <option value="ARS">Peso</option>
-                            <option value="USD">Dolar</option>
-                            <option value="EUR">Euro</option>
-                            <option value="BRL">Real</option>
-                            <option value="YEN">Yen</option>
-                        </select>
-                        <div class="invalid-feedback">
-                          Por favor, ingresa a que moneda queres convertir.
-                        </div>
-                      </div>
 
-                      <div class="col-12">
-                        <label for="feesa" class="form-label">A: </label>
-                        <select id="divisa">
-                            <option value="ARS">Peso</option>
-                            <option value="USD">Dolar</option>
-                            <option value="EUR">Euro</option>
-                            <option value="BRL">Real</option>
-                            <option value="YEN">Yen</option>
-                        </select>
-                        <div class="invalid-feedback">
-                          Por favor, ingresa a que moneda queres convertir.
-                        </div>
-                      </div>
-      
                     <hr class="my-4">
       
                     <div class="form-check">
@@ -145,12 +77,96 @@
       
                     <hr class="my-4">
       
-                    <input class="w-100 btn btn-primary btn-lg" id="simulate" type="submit" value="Simular">
+                    <input class="w-100 btn btn-primary btn-lg" id="simulate" type="submit" value="Guardar" id="registro">
                   </form>
                 </div>
               </div>
         </main>
+
+        <br>
+        <br>
+        <section id="conversorDiv">
+        <div class="containerDiv">
+            <h3>Conversor de Divisas</h3>
+            <p>Por favor, elegí la moneda y el valor a convertir.</p>
+            <div class="currencyDiv">
+                <select id="currency-one">
+                    <option value="ARS" selected>Peso</option>
+                    <option value="USD">Dolar</option>
+                    <option value="EUR">Euro</option>
+                    <option value="BRL">Real</option>
+                    <option value="JPY">Yen</option>
+                </select>
+                <input type="text" id="amount-one" placeholder="0" value="1">
+            </div>
+            <div class="currencyDiv">
+                <select id="currency-two">
+                    <option value="ARS">Peso</option>
+                    <option value="USD" selected>Dolar</option>
+                    <option value="EUR">Euro</option>
+                    <option value="BRL">Real</option>
+                    <option value="JPY">Yen</option>
+                </select>
+                <input type="text" id="amount-two" placeholder="0" value="1">
+            </div>
+            <div class="swap-rate-container">
+                <button class="btnDiv" id="swap">
+                    <i class='bx bx-transfer-alt'></i>
+                </button>
+                <div class="rate" id="rate">
+
+                </div>
+            </div>
+        </div>
+        </section>
     </div>
+
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+      
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-twitter"></i
+            ></a>
+      
+            <!-- Google -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-google"></i
+            ></a>
+      
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-instagram"></i
+            ></a>
+      
+            <!-- Linkedin -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+      
+            <!-- Github -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-github"></i
+            ></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2020 Copyright:
+          <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
 
 
 <script src="/js/main.js"></script>
