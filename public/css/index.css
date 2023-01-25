@@ -80,7 +80,7 @@ html {
     rgba(0,0,0,0.5),
     rgba(0,0,0,0.5)
   )
-  ,url(/media/hero.jpg);
+  ,url(/public/media/hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -100,7 +100,7 @@ html {
 }
 
 .btnDiv {
-  color: yellow;
+  color: gold;
   cursor: pointer;
   background-color: #1c1b1b;
   padding: 1em;
