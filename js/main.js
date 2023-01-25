@@ -31,3 +31,4 @@ swap_btn.addEventListener("click", () => {
 });
 
 calculate()
+

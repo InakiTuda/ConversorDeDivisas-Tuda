@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  *, 
+  *::after, 
+  *::before {
+    box-sizing: inherit;
+    outline: none;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  .container {
+    max-width: 960px;
+  }
+  
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+  
+  .b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+  
+  .b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+  }
+  
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+  
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+  
+  .nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  #conversorDiv {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(
+      0deg,
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+    )
+    ,url(/media/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 0;
+    margin: 10px;
+  }
+  
+  .containerDiv {
+    display: flex;
+    width: 50%;
+    height: 50%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 15px;
+  }
+  
+  .btnDiv {
+    color: yellow;
+    cursor: pointer;
+    background-color: #1c1b1b;
+    padding: 1em;
+    border-radius: 5px;
+    margin-top: 2em;
+    border: none;
+  }
+  
+  .currencyDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  #currency-one,
+  #currency-two {
+    padding: .5em;
+  }
+  
+  #currency-one,
+  #currency-two,
+  #amount_one,
+  #amount_two {
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 0.5em;
+  }
+  
+  .currencyDiv select {
+    border: 1px solid #dedede;
+    font-size: 16px;
+  }
+  
+  .currencyDiv input {
+    color: #1c1b1b;
+    padding: 0.5em;
+    border: 1;
+    font-size: 15.5px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .swap-rate-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .rate {
+    color: #000;
+    font-size: 14px;
+    padding: 0 10px;
+    margin-top: 1em;
+  }
+
+#nuestras-divisas{
+    background-color: rgb(30,30,30);
+    color: white;
+    text-align: center;
+}
+
+#nuestras-divisas .container{
+    padding: 150px 12px;
+}
+
+#nuestras-divisas h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+#nuestras-divisas p{
+    display: none;
+}
+
+#nuestras-divisas .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 30px;
+    border-radius: 15px;
+}
+
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/media/peso.jpg");
+
+}
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/media/dolar.jpg");
+}
+
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/media/euro.jpg");
+
+}
+
+.carta:nth-child(4){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/media/real.jpg");
+
+}
+
+.carta:nth-child(5){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/media/yen.jpg");
+
+}
+
+.info {
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: black;
+    background-color: white;
+}
