@@ -1,4 +1,4 @@
-let carrito = []
+let carrito = JSON.parse(localStorage.getItem('carrito')) || []
 
 const productoContenedor = document.getElementById("producto-contenedor")
 
@@ -11,20 +11,19 @@ productoContenedor.addEventListener("click", (e) => {
 const validarProductoRepetido = (productoId) => {
     const productoRepetido = carrito.find(producto => producto.id == productoId)
 
-    if (localStorage.getItem('carrito')) {
-        carrito = obtenerCarritoStorage()
-    }
 
     if (!productoRepetido) {
         const producto = productos.find(producto => producto.id == productoId)
         carrito.push(producto)
         pintarProductoCarrito(producto)
         actualizarTotalesCarrito(carrito)
+        pintarCarrito()
     } else {
         productoRepetido.cantidad++ 
         const cantidadProducto = document.getElementById(`cantidad${productoRepetido.id}`)
         cantidadProducto.innerText = `Cantidad: ${productoRepetido.cantidad}`
         actualizarTotalesCarrito(carrito)
+        pintarCarrito()
     }
 };
 
@@ -36,6 +35,10 @@ const pintarProductoCarrito = (producto) => {
         <p>${producto.nombre}</p>
         <p>Precio: ${producto.precio}</p>
         <p id=cantidad${producto.id}>Cantidad: ${producto.cantidad}</p>
+        <div class="carrito-producto-subtotal">
+        <small>Subtotal</small>
+        <p>$${producto.precio * producto.cantidad}</p>
+        </div>
         <button class="btn waves-effect waves-ligth boton-eliminar" value="${producto.id}">X</button>
     `
     contenedor.appendChild(div)
@@ -57,7 +60,7 @@ const pintarTotalesCarrito = (totalCantidad, totalCompra) => {
     precioTotal.innerText = totalCompra
 };
 
-const pintarCarrito = (carrito) => {
+const pintarCarrito = () => {
     const contenedor = document.getElementById('carrito-contenedor')
 
     contenedor.innerHTML = ''
@@ -86,14 +89,9 @@ const guardarCarritoStorage = (carrito) => {
     localStorage.setItem('carrito', JSON.stringify(carrito))
 };
 
-const obtenerCarritoStorage = () => {
-    const carritoStorage = JSON.parse(localStorage.getItem('carrito'))
-    return carritoStorage
-};
 
 const cargarCarrito = () => {
     if (localStorage.getItem('carrito')) {
-        carrito = obtenerCarritoStorage()
         pintarCarrito(carrito)
         actualizarTotalesCarrito(carrito)
     }
