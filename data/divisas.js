@@ -6,7 +6,7 @@ const productos =
         tipo: "Dólar",
         descripcion: "Dólar Estadounidense",
         precio: 186.82,
-        cantidad: 0
+        cantidad: 1
     },
 
     {
@@ -15,7 +15,7 @@ const productos =
         tipo: "Euro",
         descripcion: "Euro",
         precio: 190.78,
-        cantidad: 0
+        cantidad: 1
     },
 
     {
@@ -24,7 +24,7 @@ const productos =
         tipo: "Real",
         descripcion: "Real Brasilero",
         precio: 34.12,
-        cantidad: 0
+        cantidad: 1
     },
 
     {
@@ -33,6 +33,6 @@ const productos =
         tipo: "Yen",
         descripcion: "Yen Japones",
         precio: 106.30,
-        cantidad: 0
+        cantidad: 1
     },
 ]

@@ -18,7 +18,10 @@ const validarProductoRepetido = (productoId) => {
         carrito.push(producto)
         pintarProductoCarrito(producto)
     } else {
-        //producto repetido
+        productoRepetido.cantidad++
+        const cantidadProducto = document.getElementById(`cantidad${productoRepetido}.id`)
+        cantidadProducto.innerText = `Cantidad: ${productoRepetido.cantidad}`
+        actualizarTotalesCarrito(carrito)
     }
 };
 
@@ -34,3 +37,4 @@ const pintarProductoCarrito = (producto) => {
     `
     contenedor.appendChild(div)
 };
+
