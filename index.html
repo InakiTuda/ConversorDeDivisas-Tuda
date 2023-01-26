@@ -12,7 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </head>
 
-<body class="bg-light">
+<body class="bg-dar">
 
     <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
@@ -25,7 +25,6 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-              <a class="nav-link" href="#registro">Registro</a>
               <a class="nav-link" href="#conversorDiv">Conversor</a>
               <a class="nav-link" href="compra.html">Compra</a>
             </div>
@@ -35,59 +34,15 @@
 
     <div class="container">
         <main>
-            <div id="registro" class="py-5 text-center">
+            <div class="py-5 text-center">
                 <img class="d-block mx-auto mb-4" src="public/media/logo.png" alt="" width="150" height="100">
                 <h2>Conversor de Divisas</h2>
                 <p class="lead">Conversor de moneda, cambio de divisas y convertidor para dólares, euros, pesos y todas las otras monedas.</p>
             </div>
-                <div class="">
-                  <h4 class="mb-3">Para convertir, por favor ingresa tus datos.</h4>
-                  <form class="needs-validation" id="form" novalidate>
-                    <div class="row g-3">
-                      <div class="col-sm-6">
-                        <label for="firstName" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                        <div class="invalid-feedback">
-                          Por favor, ingresa tu nombre.
-                        </div>
-                      </div>
-      
-                      <div class="col-sm-6">
-                        <label for="lastName" class="form-label">Apellido</label>
-                        <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                        <div class="invalid-feedback">
-                          Por favor, ingresa tu apellido.
-                        </div>
-                      </div>
-      
-                      <div class="col-12">
-                        <label for="email" class="form-label">Email <span class="text-muted">(Opcional)</span></label>
-                        <input type="email" class="form-control" id="email" placeholder="tuemail@example.com">
-                        <div class="invalid-feedback">
-                          Por favor, ingresa tu email.
-                        </div>
-                      </div>
-
-                    <hr class="my-4">
-      
-                    <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="save-info">
-                      <label class="form-check-label" for="save-info">Guardar esta información para la próxima</label>
-                    </div>
-      
-                    <hr class="my-4">
-      
-                    <input class="w-100 btn btn-primary btn-lg" id="simulate" type="submit" value="Guardar" id="registro">
-                  </form>
-                </div>
-              </div>
         </main>
 
-        <br>
-        <br>
         <section id="conversorDiv">
         <div class="containerDiv">
-            <h3>Conversor de Divisas</h3>
             <p>Por favor, elegí la moneda y el valor a convertir.</p>
             <div class="currencyDiv">
                 <select id="currency-one">
@@ -121,7 +76,7 @@
         </section>
     </div>
 
-    <footer class="bg-dark text-center text-white">
+    <div class="footer bg-dark text-center text-white">
         <!-- Grid container -->
         <div class="container p-4 pb-0">
           <!-- Section: Social media -->
@@ -166,7 +121,7 @@
           <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
         </div>
         <!-- Copyright -->
-      </footer>
+    </div>
 
 
 <script src="/js/main.js"></script>

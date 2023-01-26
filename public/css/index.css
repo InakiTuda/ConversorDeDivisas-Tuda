@@ -70,20 +70,11 @@ html {
 }
 
 #conversorDiv {
-  height: 100vh;
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: linear-gradient(
-    0deg,
-    rgba(0,0,0,0.5),
-    rgba(0,0,0,0.5)
-  )
-  ,url(/public/media/hero.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
   padding: 0;
   margin: 10px;
 }
@@ -97,16 +88,21 @@ html {
   align-items: center;
   background-color: #fff;
   border-radius: 15px;
+  border: #1c1b1b solid 2px;
+  overflow: auto;
+  background-color: #1c1b1b;
+  color: white;
 }
 
 .btnDiv {
-  color: gold;
+  color: #1c1b1b;
   cursor: pointer;
   background-color: #1c1b1b;
   padding: 1em;
   border-radius: 5px;
   margin-top: 2em;
   border: none;
+  background-color: white;
 }
 
 .currencyDiv {
@@ -152,8 +148,16 @@ html {
 }
 
 .rate {
-  color: #000;
+  color: white;
   font-size: 14px;
   padding: 0 10px;
   margin-top: 1em;
+}
+
+.footer {
+  padding: 1em;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
